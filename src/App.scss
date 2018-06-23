@@ -1,4 +1,8 @@
-$primary-bgcolor:#2a7cdd;
+$primary-bgcolor: #b8f900;
+$primary-color: #012e2f;
+body{
+  color:$primary-color;
+}
 .App {
   text-align: center;
 }
@@ -12,7 +16,7 @@ $primary-bgcolor:#2a7cdd;
   background-color: $primary-bgcolor;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: $primary-color;;
 }
 
 .App-title {
