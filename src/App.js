@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import './ControlledCarousel.js';
+import GridListExampleSimple from './GridListExampleSimple.js';
+import AutoCompleteExampleSimple from './AutoComplete.js';
 import ControlledCarousel from './ControlledCarousel.js';
 import { Carousel,Button } from 'react-bootstrap';
-
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AutoComplete from 'material-ui/AutoComplete';
+import MenuItem from 'material-ui/MenuItem';
 
 
 class App extends Component {
@@ -17,6 +20,8 @@ class App extends Component {
         </header>
         <ControlledCarousel />
         <Button bsStyle="primary">Primary</Button>
+
+      <GridListExampleSimple />
       </div>
     );
   }

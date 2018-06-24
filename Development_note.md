@@ -151,3 +151,145 @@ export default ControlledCarousel;
 ```
 **困ったことは画像の置き場です。適当な場所にimagesフォルダを作成して画像を用意してもうまく表示されません。  
 正しく表示させるには、画像は「public」フォルダに入れておく必要があります。「public」フォルダ内でさらにimagesフォルダなどを作成しておくと良いです。その時のパスは「images/food1.jpg」などのように指定します。ControlledCarousel.jsファイルからのパスではありませんので注意してください。**
+
+## material-uiの導入
+React components that implement Google's Material Design
+[Material-UI](https://v0.material-ui.com/#/)
+
+```
+yarn add material-ui
+```
+### Grid List追加
+
+GridListExampleSimple.js
+```
+import React from 'react';
+import {GridList, GridTile} from 'material-ui/GridList';
+import IconButton from 'material-ui/IconButton';
+import Subheader from 'material-ui/Subheader';
+import StarBorder from 'material-ui/svg-icons/toggle/star-border';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+
+
+const styles = {
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+  },
+  gridList: {
+    width: 500,
+    height: 450,
+    overflowY: 'auto',
+  },
+};
+
+const tilesData = [
+  {
+    img: 'images/grid-list/photo1_thum.jpg',
+    title: 'Breakfast',
+    author: 'jill111',
+  },
+  {
+    img: 'images/grid-list/photo2_thum.jpg',
+    title: 'Tasty burger',
+    author: 'pashminu',
+  },
+  {
+    img: 'images/grid-list/photo3_thum.jpg',
+    title: 'Camera',
+    author: 'Danson67',
+  },
+  {
+    img: 'images/grid-list/photo4_thum.jpg',
+    title: 'Morning',
+    author: 'fancycrave1',
+  },
+  {
+    img: 'images/grid-list/photo5_thum.jpg',
+    title: 'Hats',
+    author: 'Hans',
+  },
+  {
+    img: 'images/grid-list/photo6_thum.jpg',
+    title: 'Honey',
+    author: 'fancycravel',
+  },
+  {
+    img: 'images/grid-list/photo7_thum.jpg',
+    title: 'Vegetables',
+    author: 'jill111',
+  },
+  {
+    img: 'images/grid-list/photo8_thum.jpg',
+    title: 'Water plant',
+    author: 'BkrmadtyaKarki',
+  },
+];
+
+/**
+ * A simple example of a scrollable `GridList` containing a [Subheader](/#/components/subheader).
+ */
+const GridListExampleSimple = () => (
+  <MuiThemeProvider>
+  <div style={styles.root}>
+    <GridList
+      cellHeight={180}
+      style={styles.gridList}
+    >
+      <Subheader>December</Subheader>
+      {tilesData.map((tile) => (
+        <GridTile
+          key={tile.img}
+          title={tile.title}
+          subtitle={<span>by <b>{tile.author}</b></span>}
+          actionIcon={<IconButton><StarBorder color="white" /></IconButton>}
+        >
+          <img src={tile.img} />
+        </GridTile>
+      ))}
+    </GridList>
+  </div>
+  </MuiThemeProvider>
+);
+
+export default GridListExampleSimple;
+```
+
+App.js
+```
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import GridListExampleSimple from './GridListExampleSimple.js';
+import AutoCompleteExampleSimple from './AutoComplete.js';
+import ControlledCarousel from './ControlledCarousel.js';
+import { Carousel,Button } from 'react-bootstrap';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AutoComplete from 'material-ui/AutoComplete';
+import MenuItem from 'material-ui/MenuItem';
+
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <ControlledCarousel />
+        <Button bsStyle="primary">Primary</Button>
+
+      <GridListExampleSimple />
+      </div>
+    );
+  }
+}
+
+
+export default App;
+```
+
+画像はpublic/images/grid-listフォルダに置く。
+
