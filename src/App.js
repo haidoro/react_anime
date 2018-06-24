@@ -13,15 +13,24 @@ import MenuItem from 'material-ui/MenuItem';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App container">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <ControlledCarousel />
-        <Button bsStyle="primary">Primary</Button>
-
-      <GridListExampleSimple />
+        <div className="row">
+          <h2> Bootstrap Buttons</h2>
+          <Button bsStyle="primary">Primary</Button>
+          <Button bsStyle="success">Success</Button>
+          <Button bsStyle="info">Info</Button>
+          <Button bsStyle="warning">Warning</Button>
+          <Button bsStyle="danger">Danger</Button>
+        </div>
+        <div className="row">
+          <h2>Meterial Grid</h2>
+          <GridListExampleSimple />
+      </div>
       </div>
     );
   }

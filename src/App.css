@@ -1,6 +1,9 @@
 body {
   color: #012e2f; }
 
+.row {
+  margin-bottom: 50px; }
+
 .App {
   text-align: center; }
 
@@ -19,6 +22,9 @@ body {
 
 .App-intro {
   font-size: large; }
+
+.carousel-inner > .item > img {
+  margin: auto; }
 
 @keyframes App-logo-spin {
   from {
