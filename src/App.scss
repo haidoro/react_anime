@@ -1,7 +1,8 @@
-$primary-bgcolor: #FF5722;
-$primary-color: #fff;
+$primary-bgcolor: #F8BBD0;
+$accent-bgcolor: #E91E63;
+$accent-color: #E91E63;
 body{
-  color:$primary-color;
+  color:#333;
 }
 .row{
   margin-bottom: 50px;
@@ -16,10 +17,10 @@ body{
 }
 
 .App-header {
-  background-color: $primary-bgcolor;
+  background-color: $accent-bgcolor;
   height: 150px;
   padding: 20px;
-  color: $primary-color;;
+  color: #fff;
 }
 
 .App-title {
