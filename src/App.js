@@ -28,12 +28,12 @@ class App extends Component {
           <Button bsStyle="danger">Danger</Button>
         </div>
         <div className="row">
-          <h2>Meterial Grid</h2>
+          <h2>Material Grid</h2>
           <GridListExampleSimple />
         </div>
         <div className="row">
             <MuiThemeProvider>
-            <h2>Meterial Auto Complete</h2>
+            <h2>Material Auto Complete</h2>
               <AutoCompleteExampleDataSource />
             </MuiThemeProvider>
         </div>

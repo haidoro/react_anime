@@ -293,3 +293,146 @@ export default App;
 
 画像はpublic/images/grid-listフォルダに置く。
 
+## Material Auto Completeの導入
+
+[Material-UI](https://v0.material-ui.com/#/)を参考に導入します。
+
+v0.15.0から、マテリアルUIコンポーネントはテーマを提供する必要があります。`MuiThemeProvider`でコンポーネントを囲む必要が有ります。
+例
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import MyAwesomeReactComponent from './MyAwesomeReactComponent';
+
+const App = () => (
+  <MuiThemeProvider>
+    <MyAwesomeReactComponent />
+  </MuiThemeProvider>
+);
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+);
+
+```
+
+src/AutoCompleteExampleSimple.js
+```
+import React from 'react';
+import AutoComplete from 'material-ui/AutoComplete';
+import MenuItem from 'material-ui/MenuItem';
+
+const dataSource1 = [
+  {
+    text: 'text-value1',
+    value: (
+      <MenuItem
+        primaryText="text-value1"
+        secondaryText="&#9786;"
+      />
+    ),
+  },
+  {
+    text: 'text-value2',
+    value: (
+      <MenuItem
+        primaryText="text-value2"
+        secondaryText="&#9786;"
+      />
+    ),
+  },
+];
+
+const dataSource2 = ['12345', '23456', '34567'];
+
+const dataSource3 = [
+  {textKey: 'Some Text', valueKey: 'someFirstValue'},
+  {textKey: 'Some Text', valueKey: 'someSecondValue'},
+];
+const dataSourceConfig = {
+  text: 'textKey',
+  value: 'valueKey',
+};
+
+/**
+ * The first example has `MenuItem`s in its data source that display on data entry.
+ * The second example uses an array of values as its `dataSource`, and updates on focus.
+ * Both examples have filtering disabled.
+ */
+const AutoCompleteExampleDataSource = () => (
+  <div>
+    <AutoComplete
+      hintText="text-value data"
+      filter={AutoComplete.noFilter}
+      dataSource={dataSource1}
+    /><br />
+    <AutoComplete
+      floatingLabelText="showAllItems"
+      filter={AutoComplete.noFilter}
+      openOnFocus={true}
+      dataSource={dataSource2}
+    /><br />
+    <AutoComplete
+      floatingLabelText="Same text, different values"
+      filter={AutoComplete.noFilter}
+      openOnFocus={true}
+      dataSource={dataSource3}
+      dataSourceConfig={dataSourceConfig}
+    />
+  </div>
+);
+
+export default AutoCompleteExampleDataSource;
+```
+
+App.js
+```
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import GridListExampleSimple from './GridListExampleSimple.js';
+import AutoCompleteExampleDataSource from './AutoCompleteExampleSimple';
+import ControlledCarousel from './ControlledCarousel.js';
+import { Carousel,Button } from 'react-bootstrap';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AutoComplete from 'material-ui/AutoComplete';
+import MenuItem from 'material-ui/MenuItem';
+
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App container">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <ControlledCarousel />
+        <div className="row">
+          <h2> Bootstrap Buttons</h2>
+          <Button bsStyle="primary">Primary</Button>
+          <Button bsStyle="success">Success</Button>
+          <Button bsStyle="info">Info</Button>
+          <Button bsStyle="warning">Warning</Button>
+          <Button bsStyle="danger">Danger</Button>
+        </div>
+        <div className="row">
+          <h2>Meterial Grid</h2>
+          <GridListExampleSimple />
+        </div>
+        <div className="row">
+            <MuiThemeProvider>
+            <h2>Meterial Auto Complete</h2>
+              <AutoCompleteExampleDataSource />
+            </MuiThemeProvider>
+        </div>
+      </div>
+    );
+  }
+}
+
+
+export default App;
+```
