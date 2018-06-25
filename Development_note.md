@@ -287,7 +287,6 @@ class App extends Component {
   }
 }
 
-
 export default App;
 ```
 
@@ -298,6 +297,7 @@ export default App;
 [Material-UI](https://v0.material-ui.com/#/)を参考に導入します。
 
 v0.15.0から、マテリアルUIコンポーネントはテーマを提供する必要があります。`MuiThemeProvider`でコンポーネントを囲む必要が有ります。
+
 例
 ```
 import React from 'react';
@@ -315,7 +315,6 @@ ReactDOM.render(
   <App />,
   document.getElementById('app')
 );
-
 ```
 
 src/AutoCompleteExampleSimple.js
@@ -433,6 +432,14 @@ class App extends Component {
   }
 }
 
-
 export default App;
+```
+
+## React Routerの導入
+
+[React Router参考ページ](yarn add react-router-dom)
+
+### インストール
+```
+yarn add react-router-dom
 ```
