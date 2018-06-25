@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import GridListExampleSimple from './GridListExampleSimple.js';
-import AutoCompleteExampleSimple from './AutoComplete.js';
+import AutoCompleteExampleDataSource from './AutoCompleteExampleSimple';
 import ControlledCarousel from './ControlledCarousel.js';
 import { Carousel,Button } from 'react-bootstrap';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -30,7 +30,13 @@ class App extends Component {
         <div className="row">
           <h2>Meterial Grid</h2>
           <GridListExampleSimple />
-      </div>
+        </div>
+        <div className="row">
+            <MuiThemeProvider>
+            <h2>Meterial Auto Complete</h2>
+              <AutoCompleteExampleDataSource />
+            </MuiThemeProvider>
+        </div>
       </div>
     );
   }
