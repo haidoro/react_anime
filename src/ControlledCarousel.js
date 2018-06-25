@@ -27,11 +27,7 @@ class ControlledCarousel extends React.Component {
     const { index, direction } = this.state;
 
     return (
-      <Carousel
-        activeIndex={index}
-        direction={direction}
-        onSelect={this.handleSelect}
-      >
+      <Carousel>
         <Carousel.Item>
           <img width={900} height={500} alt="900x500" src="images/food1.jpg" />
           <Carousel.Caption>

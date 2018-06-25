@@ -1,5 +1,5 @@
 body {
-  color: #012e2f; }
+  color: #fff; }
 
 .row {
   margin-bottom: 50px; }
@@ -12,10 +12,10 @@ body {
   height: 80px; }
 
 .App-header {
-  background-color: #b8f900;
+  background-color: #FF5722;
   height: 150px;
   padding: 20px;
-  color: #012e2f; }
+  color: #fff; }
 
 .App-title {
   font-size: 1.5em; }
