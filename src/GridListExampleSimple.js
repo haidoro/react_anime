@@ -21,42 +21,42 @@ const styles = {
 
 const tilesData = [
   {
-    img: 'images/grid-list/photo1_thum.jpg',
+    img: 'images/grid-list/sweets1.jpg',
     title: 'Breakfast',
     author: 'jill111',
   },
   {
-    img: 'images/grid-list/photo2_thum.jpg',
+    img: 'images/grid-list/sweets2.jpg',
     title: 'Tasty burger',
     author: 'pashminu',
   },
   {
-    img: 'images/grid-list/photo3_thum.jpg',
+    img: 'images/grid-list/sweets3.jpg',
     title: 'Camera',
     author: 'Danson67',
   },
   {
-    img: 'images/grid-list/photo4_thum.jpg',
+    img: 'images/grid-list/sweets4.jpg',
     title: 'Morning',
     author: 'fancycrave1',
   },
   {
-    img: 'images/grid-list/photo5_thum.jpg',
+    img: 'images/grid-list/sweets5.jpg',
     title: 'Hats',
     author: 'Hans',
   },
   {
-    img: 'images/grid-list/photo6_thum.jpg',
+    img: 'images/grid-list/sweets6.jpg',
     title: 'Honey',
     author: 'fancycravel',
   },
   {
-    img: 'images/grid-list/photo7_thum.jpg',
+    img: 'images/grid-list/sweets7.jpg',
     title: 'Vegetables',
     author: 'jill111',
   },
   {
-    img: 'images/grid-list/photo8_thum.jpg',
+    img: 'images/grid-list/sweets8.jpg',
     title: 'Water plant',
     author: 'BkrmadtyaKarki',
   },
