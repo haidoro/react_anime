@@ -437,8 +437,6 @@ export default App;
 
 ## React Routerの導入
 
-[React Router参考ページ](yarn add react-router-dom)
-
 ルーティングするにはreact-router-domをインストールする必要が有ります。
 ルーティングは以下サイトが参考になります。
 [react-router@v4を使ってみよう：シンプルなtutorial](https://qiita.com/m4iyama/items/b4ca1773580317e7112e)
