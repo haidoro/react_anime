@@ -8,10 +8,11 @@ import { Carousel,Button } from 'react-bootstrap';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AutoComplete from 'material-ui/AutoComplete';
 import MenuItem from 'material-ui/MenuItem';
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import CSSTransition from 'react-transition-group';
 
 class App extends Component {
-  render() {
+  render(props) {
     return (
       <div className="App container">
         <header className="App-header">
@@ -36,7 +37,7 @@ class App extends Component {
   }
 }
 
-const Home = () => (
+const Home = ({items}) => (
   <div>
     <h2>Home</h2>
     <ControlledCarousel />

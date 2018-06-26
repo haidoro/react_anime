@@ -527,3 +527,11 @@ const Contact = () => (
 
 export  default App
 ```
+
+## Reactのアニメーションアドオン'react-transition-group'
+
+react-transition-groupのインストール
+```
+yarn add react-transition-group
+```
+
