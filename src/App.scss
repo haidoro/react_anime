@@ -8,7 +8,7 @@ body{
   margin-bottom: 50px;
 }
 .App {
-  text-align: center;
+
 }
 
 .App-logo {
@@ -20,6 +20,7 @@ body{
   background-color: $accent-bgcolor;
   height: 150px;
   padding: 20px;
+  text-align: center;
   color: #fff;
 }
 
@@ -33,11 +34,32 @@ body{
 .carousel-inner > .item > img{
   margin:auto;
 }
+h2{
+  text-align: center;
+}
 nav li{
   display:inline-block;
   margin-right:20px;
 }
+.buttons{
+  text-align: center;
+}
+dl{
+		width:680px;
+		margin:auto;
+		font-size:18px;
+	}
+	dt{
+		background-color: #FF006D;
+		color:#fff;
+		padding:10px;
 
+	}
+	dd{
+		border:1px solid #FF006D;
+		padding:10px;
+		margin-left:0;
+	}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

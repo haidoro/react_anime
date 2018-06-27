@@ -38,7 +38,7 @@ class App extends Component {
 }
 
 const Home = ({items}) => (
-  <div>
+  <div className="buttons">
     <h2>Home</h2>
     <ControlledCarousel />
     <div className="row">
@@ -48,6 +48,15 @@ const Home = ({items}) => (
       <Button bsStyle="info">Info</Button>
       <Button bsStyle="warning">Warning</Button>
       <Button bsStyle="danger">Danger</Button>
+    </div>
+    <div>
+      <h2>Click Event</h2>
+      <dl>
+		    <dt>我輩は猫である</dt>
+      		<dd><p> 吾輩猫である。名前はまだ無い。</p>
+            <p>　どこで生れたかとんと見当けんとうがつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪どうあくな種族であったそうだ。この書生というのは時々我々を捕つかまえて煮にて食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌てのひらに載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始みはじめであろう。この時妙なものだと思った感じが今でも残っている。</p>
+          </dd>
+	      </dl>
     </div>
   </div>
 )
